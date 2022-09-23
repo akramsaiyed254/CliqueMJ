@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>23 Sep 2022, 16:49</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.qa.stepdef.Dashboardstepdef.dashboardShouldBeDisplayedWithWhenUserSignUp(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="11025000000">11.025</td>
+              <td class="duration" data-value="11025000000">11.025</td>
+              <td class="duration" data-value="11025000000">11.025</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Hooks.initialize()</td>
+              <td>12</td>
+              <td class="duration" data-value="462416666">0.462</td>
+              <td class="duration" data-value="462416666">0.569</td>
+              <td class="duration" data-value="5549000000">5.549</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Hooks.quit(io.cucumber.java.Scenario)</td>
+              <td>12</td>
+              <td class="duration" data-value="869833333">0.869</td>
+              <td class="duration" data-value="869833333">1.516</td>
+              <td class="duration" data-value="10438000000">10.438</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBePageDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBeRedeemYourCashImage()</td>
+              <td>1</td>
+              <td class="duration" data-value="3044000000">3.044</td>
+              <td class="duration" data-value="3044000000">3.044</td>
+              <td class="duration" data-value="3044000000">3.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBeScanYourReceiptImage()</td>
+              <td>1</td>
+              <td class="duration" data-value="3054000000">3.054</td>
+              <td class="duration" data-value="3054000000">3.054</td>
+              <td class="duration" data-value="3054000000">3.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBeSecondPageDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBeShopFeaturedBrandsImage()</td>
+              <td>1</td>
+              <td class="duration" data-value="3049000000">3.049</td>
+              <td class="duration" data-value="3049000000">3.049</td>
+              <td class="duration" data-value="3049000000">3.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.thereShouldBeThirdPageDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="duration" data-value="107000000">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.userClickOnContinueButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="590500000">0.590</td>
+              <td class="duration" data-value="590500000">1.034</td>
+              <td class="duration" data-value="1181000000">1.181</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.userClickOnStartNowButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.userIsRedirectedToOneMoreThingPageWithTitle(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="946000000">0.946</td>
+              <td class="duration" data-value="946000000">0.946</td>
+              <td class="duration" data-value="946000000">0.946</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.userIsRedirectedToRedeemYourCashPageWithTitle(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="129500000">0.129</td>
+              <td class="duration" data-value="129500000">0.139</td>
+              <td class="duration" data-value="259000000">0.259</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Introductionstepdef.userIsRedirectedToScanYouReceiptPageWithTitle(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="579500000">0.579</td>
+              <td class="duration" data-value="579500000">1.023</td>
+              <td class="duration" data-value="1159000000">1.159</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Otpstepdef.userClickOnDoneButtonInKeyboard()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Otpstepdef.userEnterOtp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2348000000">2.348</td>
+              <td class="duration" data-value="2348000000">2.348</td>
+              <td class="duration" data-value="2348000000">2.348</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.clickOnEnablePushNotifications()</td>
+              <td>1</td>
+              <td class="duration" data-value="931000000">0.931</td>
+              <td class="duration" data-value="931000000">0.931</td>
+              <td class="duration" data-value="931000000">0.931</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.thereShouldBeBellNotificationImage()</td>
+              <td>1</td>
+              <td class="duration" data-value="3075000000">3.075</td>
+              <td class="duration" data-value="3075000000">3.075</td>
+              <td class="duration" data-value="3075000000">3.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.thereShouldBeEnablePushNotificationsButton(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.thereShouldBeEnablePushNotificationsPageDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.thereShouldBeILlDoThisLaterButton(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.PushNotistepdef.userHasRedirectedToOneMoreThingPageWithTitle(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="duration" data-value="118000000">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.otpScreenShouldBeDisplayed(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2419000000">2.419</td>
+              <td class="duration" data-value="2419000000">4.786</td>
+              <td class="duration" data-value="4838000000">4.838</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userCheckTheTermsAndConditionsCheckbox()</td>
+              <td>1</td>
+              <td class="duration" data-value="2305000000">2.305</td>
+              <td class="duration" data-value="2305000000">2.305</td>
+              <td class="duration" data-value="2305000000">2.305</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userClickOnCountryCodeDropDown()</td>
+              <td>1</td>
+              <td class="duration" data-value="1019000000">1.019</td>
+              <td class="duration" data-value="1019000000">1.019</td>
+              <td class="duration" data-value="1019000000">1.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userClickOnSignUpButton()</td>
+              <td>6</td>
+              <td class="duration" data-value="2258833333">2.258</td>
+              <td class="duration" data-value="2258833333">4.854</td>
+              <td class="duration" data-value="13553000000">13.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userEnterConfirmPassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2476000000">2.476</td>
+              <td class="duration" data-value="2476000000">2.476</td>
+              <td class="duration" data-value="2476000000">2.476</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userEnterCountryCode(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1225000000">1.225</td>
+              <td class="duration" data-value="1225000000">1.225</td>
+              <td class="duration" data-value="1225000000">1.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userEnterEnterFullName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3447000000">3.447</td>
+              <td class="duration" data-value="3447000000">3.447</td>
+              <td class="duration" data-value="3447000000">3.447</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userEnterPassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2287000000">2.287</td>
+              <td class="duration" data-value="2287000000">2.287</td>
+              <td class="duration" data-value="2287000000">2.287</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userEnterPhoneNumber(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1093000000">1.093</td>
+              <td class="duration" data-value="1093000000">1.093</td>
+              <td class="duration" data-value="1093000000">1.093</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.userSelectCountryFromTheList()</td>
+              <td>1</td>
+              <td class="duration" data-value="1597000000">1.597</td>
+              <td class="duration" data-value="1597000000">1.597</td>
+              <td class="duration" data-value="1597000000">1.597</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.SignUpstepdef.validationMessageShouldBe(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1430000000">1.430</td>
+              <td class="duration" data-value="1430000000">1.430</td>
+              <td class="duration" data-value="1430000000">1.430</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.thereShouldBeFirstDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="86000000">0.086</td>
+              <td class="duration" data-value="86000000">0.086</td>
+              <td class="duration" data-value="86000000">0.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.titleShouldBePrivacyPolicy(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="987000000">0.987</td>
+              <td class="duration" data-value="987000000">0.987</td>
+              <td class="duration" data-value="987000000">0.987</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.titleShouldBeTermsConditions(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1900000000">1.900</td>
+              <td class="duration" data-value="1900000000">1.900</td>
+              <td class="duration" data-value="1900000000">1.900</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userClickOnBackButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userClickOnBackButton2()</td>
+              <td>1</td>
+              <td class="duration" data-value="424000000">0.424</td>
+              <td class="duration" data-value="424000000">0.424</td>
+              <td class="duration" data-value="424000000">0.424</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userClickOnIAgreeButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1805000000">1.805</td>
+              <td class="duration" data-value="1805000000">1.805</td>
+              <td class="duration" data-value="1805000000">1.805</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userClickOnPrivacyPolicy(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="955000000">0.955</td>
+              <td class="duration" data-value="955000000">0.955</td>
+              <td class="duration" data-value="955000000">0.955</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userClickOnTermsOfUse()</td>
+              <td>1</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userIsOnOrOlderPageWithTitle(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="83000000">0.083</td>
+              <td class="duration" data-value="83000000">0.083</td>
+              <td class="duration" data-value="83000000">0.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Termsstepdef.userShouldBeOnSignUpPage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="110500000">0.110</td>
+              <td class="duration" data-value="110500000">0.117</td>
+              <td class="duration" data-value="221000000">0.221</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.thereShouldBeCliqueMJLogoAtTop()</td>
+              <td>1</td>
+              <td class="duration" data-value="3219000000">3.219</td>
+              <td class="duration" data-value="3219000000">3.219</td>
+              <td class="duration" data-value="3219000000">3.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.thereShouldBeCliqueMJLogoInSplashScreen()</td>
+              <td>1</td>
+              <td class="duration" data-value="561000000">0.561</td>
+              <td class="duration" data-value="561000000">0.561</td>
+              <td class="duration" data-value="561000000">0.561</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.thereShouldBeWelcomeDescription(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.thereShouldBeWelcomeText(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.userClickOnGetStartedButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="973000000">0.973</td>
+              <td class="duration" data-value="973000000">0.973</td>
+              <td class="duration" data-value="973000000">0.973</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.userIsOnWelcomePage()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.userShouldBeRedirectedToShopFeatureBrandsIntroPageWithTitleShopFeatureBrands(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="138500000">0.138</td>
+              <td class="duration" data-value="138500000">0.143</td>
+              <td class="duration" data-value="277000000">0.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.qa.stepdef.Welcomstepdef.whenUserStartTheApplication()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>51</td>
+            <td>86</td>
+            <td class="duration">1.101</td>
+            <td class="duration">13.553</td>
+            <td class="duration">1:34.749</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

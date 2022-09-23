@@ -1,0 +1,38 @@
+[Android_pixel INFO ] 2022-09-23 16:48:00.798 ServerManager:20 - starting appium server
+[Android_pixel INFO ] 2022-09-23 16:48:03.059 ServerManager:29 - Appium server started
+[Android_pixel INFO ] 2022-09-23 16:48:03.081 PropertyManager:17 - loading config properties
+[Android_pixel INFO ] 2022-09-23 16:48:03.083 DriverManager:30 - initializing Appium driver
+[Android_pixel INFO ] 2022-09-23 16:48:03.101 CapabilitiesManager:18 - getting capabilities
+[Android_pixel INFO ] 2022-09-23 16:48:03.103 CapabilitiesManager:35 - appUrl is/Users/mohammadakram.saiyed/Desktop/mohammadakram.saiyed/(Mohammadakram saiyed)files/Appium/CliqueMJ app/src/test/resources/apps/app-dev-release.apk
+[Android_pixel INFO ] 2022-09-23 16:48:11.327 DriverManager:42 - Driver is initialized
+[Android_pixel INFO ] 2022-09-23 16:48:13.968 VideoManager:35 - video path: Android_pixel/Videos/Check splash screen.mp4
+[Android_pixel INFO ] 2022-09-23 16:48:18.776 VideoManager:35 - video path: Android_pixel/Videos/Check Welcome page.mp4
+[Android_pixel INFO ] 2022-09-23 16:48:19.284 BasePage:56 - click on get started button
+[Android_pixel INFO ] 2022-09-23 16:48:21.100 VideoManager:35 - video path: Android_pixel/Videos/Click on get started button..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:24.921 BasePage:56 - click on continue button
+[Android_pixel INFO ] 2022-09-23 16:48:26.816 VideoManager:35 - video path: Android_pixel/Videos/Check First introduction page..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:30.660 BasePage:56 - click on continue button
+[Android_pixel INFO ] 2022-09-23 16:48:32.533 VideoManager:35 - video path: Android_pixel/Videos/Check Second introduction page..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:36.320 BasePage:56 - click on Start Now button
+[Android_pixel INFO ] 2022-09-23 16:48:38.091 VideoManager:35 - video path: Android_pixel/Videos/Check Third introduction page..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:42.020 BasePage:56 - click on Enable Push Notifications button
+[Android_pixel INFO ] 2022-09-23 16:48:43.664 VideoManager:35 - video path: Android_pixel/Videos/Check when user click on Enable Push Notifications button..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:44.332 BasePage:56 - User click on Terms of Use
+[Android_pixel INFO ] 2022-09-23 16:48:46.767 BasePage:56 - click on back button of terms and conditions page
+[Android_pixel INFO ] 2022-09-23 16:48:47.811 BasePage:56 - User click on Privacy policy
+[Android_pixel INFO ] 2022-09-23 16:48:49.030 BasePage:56 - User click on back button of Privacy policy page
+[Android_pixel INFO ] 2022-09-23 16:48:50.211 BasePage:56 - User click on I Agree button
+[Android_pixel INFO ] 2022-09-23 16:48:52.093 VideoManager:35 - video path: Android_pixel/Videos/When user click on I Agree button..mp4
+[Android_pixel INFO ] 2022-09-23 16:48:54.975 VideoManager:35 - video path: Android_pixel/Videos/Check mandatory fields validation..mp4
+[Android_pixel INFO ] 2022-09-23 16:49:05.925 BasePage:74 - User enter country code in country code drop-down
+[Android_pixel INFO ] 2022-09-23 16:49:06.520 BasePage:56 - User select the country code from the list
+[Android_pixel INFO ] 2022-09-23 16:49:08.619 BasePage:74 - User enter phone number
+[Android_pixel INFO ] 2022-09-23 16:49:11.531 BasePage:74 - User enter password
+[Android_pixel INFO ] 2022-09-23 16:49:17.202 BasePage:74 - user enter confirm password
+[Android_pixel INFO ] 2022-09-23 16:49:22.287 BasePage:56 - User click on checkbox of terms and conditions
+[Android_pixel INFO ] 2022-09-23 16:49:30.608 VideoManager:35 - video path: Android_pixel/Videos/To verify Sign Up with valid details..mp4
+[Android_pixel INFO ] 2022-09-23 16:49:31.285 BasePage:74 - User enter first digit
+[Android_pixel INFO ] 2022-09-23 16:49:32.183 BasePage:74 - User Second first digit
+[Android_pixel INFO ] 2022-09-23 16:49:33.159 BasePage:74 - User Third first digit
+[Android_pixel INFO ] 2022-09-23 16:49:34.447 VideoManager:35 - video path: Android_pixel/Videos/User enter invalid OTP in sign up.mp4
+[Android_pixel INFO ] 2022-09-23 16:49:47.081 VideoManager:35 - video path: Android_pixel/Videos/Verify Dashboard is displayed when user sign up.mp4
