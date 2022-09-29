@@ -23,7 +23,7 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofMillis;
 
 public class BasePage {
-    private AppiumDriver<?> driver;
+    AppiumDriver<?> driver;
     TestUtils utils = new TestUtils();
 
     public BasePage(){

@@ -17,7 +17,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
         plugin = {"pretty"
                 , "html:target/cucumber"
                 , "summary"
-                , "me.jvt.cucumber.report.PrettyReports:target/Pixel3/cucumber-html-reports"}
+                , "me.jvt.cucumber.report.PrettyReports:target/Pixel4/cucumber-html-reports"}
         ,features = {"src/test/resources"}
         ,glue = {"com.qa.stepdef"}
         ,snippets = CAMELCASE

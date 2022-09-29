@@ -5,14 +5,26 @@ import com.qa.utils.GlobalParams;
 import com.qa.utils.TestUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITBy;
+import io.appium.java_client.touch.offset.ElementOption;
 import io.cucumber.java.en_lol.AN;
 import org.openqa.selenium.By;
 
 public class IntroPage extends BasePage {
 
     TestUtils utils = new TestUtils();  //for printing log
+
+
+
+
+
+
+
+
+
 
     @AndroidFindBy(xpath="//android.widget.ImageView[1]")
     private MobileElement splashLogo;
@@ -30,6 +42,8 @@ public class IntroPage extends BasePage {
 
     @AndroidFindBy(xpath= "//android.widget.Button[@content-desc=\"Get Started\"]")
     private MobileElement getStartedButton;
+
+
 
     @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Start Now\"]")
     private  MobileElement startNowButton;
@@ -101,5 +115,9 @@ public class IntroPage extends BasePage {
         waitForVisibility(By.xpath(xpath));
         return getAttribute(By.xpath(xpath),"content-desc");
     }
+
+
+
+
 }
 
